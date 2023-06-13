@@ -7,13 +7,25 @@ import (
 	"syscall"
 
 	"github.com/icoder-new/reporter"
+	"github.com/icoder-new/reporter/db"
+	"github.com/icoder-new/reporter/logger"
+	"github.com/icoder-new/reporter/routes"
+	"github.com/icoder-new/reporter/utils"
 )
 
 func main() {
+	utils.ReadSettings()
+	utils.PutAdditionalSettings()
+
+	logger.Init()
+
+	db.StartDbConnection()
+
+	r := new(routes.Routes)
 	srv := new(reporter.Server)
 	go func() {
-		if err := srv.Run("1234", nil); err != nil {
-			// TODO: make logger and write it into log file
+		if err := srv.Run(utils.AppSettings.AppParams.PortRun, r.InitRoutes()); err != nil {
+			logger.Error.Fatal("Error occured while running http server. Error is: ", err.Error())
 			return
 		}
 	}()
@@ -23,7 +35,7 @@ func main() {
 	<-quit
 
 	if err := srv.Shutdown(context.Background()); err != nil {
-		// TODO: make logger and write it into log file
+		logger.Error.Fatal("Error occured on server shutting down. Error is: ", err.Error())
 		return
 	}
 }
