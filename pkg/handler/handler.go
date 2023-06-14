@@ -38,8 +38,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		{
 			user.GET("/", h.GetUser)
 			user.PUT("/", h.UpdateUser)
-			user.GET("/restore")
-			user.DELETE("/delete")
+			user.GET("/restore", h.RestoreUser)
+			user.DELETE("/delete", h.DeleteUser)
 		}
 
 		account := api.Group("/account", h.UserIdentity)
