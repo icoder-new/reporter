@@ -9,7 +9,7 @@ type errorResponse struct {
 	Message string `json:"message"`
 }
 
-func newErrorResonse(c *gin.Context, status int, message string) {
+func newErrorResponse(c *gin.Context, status int, message string) {
 	logger.Error.Printf(message)
 	c.AbortWithStatusJSON(status, errorResponse{
 		Message: message,
