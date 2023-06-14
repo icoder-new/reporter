@@ -4,23 +4,33 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/icoder-new/reporter/models"
 )
 
 type signInData struct {
-	Username string `json:"username" binding:"require"`
-	Password string `json:"password" binding:"require"`
+	Email    string `json:"email" biding:"required"`
+	Username string `json:"username" binding:"required"`
+	Password string `json:"password" binding:"required"`
+}
+
+type signUpData struct {
+	Firstname string `json:"firstname"`
+	Lastname  string `json:"lastname"`
+	Username  string `json:"username"`
+	Email     string `json:"email"`
+	Password  string `json:"password"`
 }
 
 func (h *Handler) SignUp(c *gin.Context) {
-	var request models.User
+	var request signUpData
 
 	if err := c.BindJSON(&request); err != nil {
 		newErrorResonse(c, http.StatusBadRequest, err.Error())
 		return
 	}
 
-	id, err := h.service.Authorization.CreateUser(request)
+	id, err := h.service.CreateUser(
+		request.Firstname, request.Lastname, request.Username, request.Email, request.Password,
+	)
 	if err != nil {
 		newErrorResonse(c, http.StatusInternalServerError, err.Error())
 		return
@@ -40,8 +50,14 @@ func (h *Handler) signIn(c *gin.Context) {
 		return
 	}
 
-	token, err := h.service.GenerateToken(request.Username, request.Password)
+	token, user, err := h.service.GenerateToken(request.Email, request.Username, request.Password)
 	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{
+			"dev": gin.H{
+				"data":     user,
+				"password": user.Password,
+			},
+		})
 		newErrorResonse(c, http.StatusInternalServerError, err.Error())
 		return
 	}

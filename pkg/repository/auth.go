@@ -17,15 +17,15 @@ func NewAuthPostgres(db *gorm.DB) *AuthPostgres {
 
 func (p *AuthPostgres) CreateUser(user models.User) (int, error) {
 	if err := p.db.Create(&user).Error; err != nil {
-		return 0, nil
+		return -1, err
 	}
 
 	return user.ID, nil
 }
 
-func (p *AuthPostgres) GetUser(username, password string) (models.User, error) {
+func (p *AuthPostgres) GetUser(email, username string) (models.User, error) {
 	var u models.User
-	err := p.db.Where("username = ? AND password = ?", username, password).First(&u).Error
+	err := p.db.Where("email = ? AND username = ?", email, username).First(&u).Error
 	if err != nil {
 		return u, err
 	}
