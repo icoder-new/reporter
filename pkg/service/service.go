@@ -7,7 +7,7 @@ import (
 
 type Authorization interface {
 	CreateUser(fistname, lastname, username, email, password string) (int, error)
-	GenerateToken(email, username, password string) (string, models.User, error)
+	GenerateToken(email, username, password string) (string, error)
 	ParseToken(token string) (int, error)
 }
 
@@ -18,14 +18,23 @@ type User interface {
 	RestoreUserById(id int) error
 }
 
+type Account interface {
+	CreateAccountByUserId(account models.Account) (int, error)
+	UpdateAccountByUserId(account models.Account) (models.Account, error)
+	DeleteAccountByUserId(userId int) error
+	RestoreAccountByUserId(userId int) error
+}
+
 type Service struct {
 	Authorization
 	User
+	Account
 }
 
 func NewService(repository *repository.Repository) *Service {
 	return &Service{
 		Authorization: NewAuthService(repository.Authorization),
 		User:          NewUserService(repository.User),
+		Account:       NewAccountService(repository.Account),
 	}
 }
