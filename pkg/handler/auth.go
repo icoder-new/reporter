@@ -24,7 +24,7 @@ func (h *Handler) SignUp(c *gin.Context) {
 	var request signUpData
 
 	if err := c.BindJSON(&request); err != nil {
-		newErrorResonse(c, http.StatusBadRequest, err.Error())
+		newErrorResponse(c, http.StatusBadRequest, err.Error())
 		return
 	}
 
@@ -32,7 +32,7 @@ func (h *Handler) SignUp(c *gin.Context) {
 		request.Firstname, request.Lastname, request.Username, request.Email, request.Password,
 	)
 	if err != nil {
-		newErrorResonse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
 
@@ -46,8 +46,7 @@ func (h *Handler) signIn(c *gin.Context) {
 	var request signInData
 
 	if err := c.BindJSON(&request); err != nil {
-		newErrorResonse(c, http.StatusBadRequest, err.Error())
-		return
+		newErrorResponse(c, http.StatusBadRequest, err.Error())
 	}
 
 	token, user, err := h.service.GenerateToken(request.Email, request.Username, request.Password)
@@ -58,7 +57,7 @@ func (h *Handler) signIn(c *gin.Context) {
 				"password": user.Password,
 			},
 		})
-		newErrorResonse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
 

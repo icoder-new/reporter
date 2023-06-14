@@ -37,7 +37,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		user := api.Group("/user", h.UserIdentity)
 		{
 			user.GET("/", h.GetUser)
-			user.PUT("/")
+			user.PUT("/", h.UpdateUser)
 			user.GET("/restore")
 			user.DELETE("/delete")
 		}
@@ -54,9 +54,9 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		report := api.Group("/report", h.UserIdentity)
 		{
 			report.GET("/")
-			report.GET("/:id")
-			report.GET("/:transaction_id")
-			report.GET("/:user_id")
+			// report.GET("/:id")
+			// report.GET("/:transaction_id")
+			// report.GET("/:user_id")
 		}
 
 		transaction := api.Group("/transaction", h.UserIdentity)

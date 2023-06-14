@@ -14,7 +14,7 @@ const userCtx = "UserId"
 func (h *Handler) UserIdentity(c *gin.Context) {
 	header := c.GetHeader("Authorization")
 	if header == "" {
-		newErrorResonse(c, http.StatusUnauthorized, "empty auth header")
+		newErrorResponse(c, http.StatusUnauthorized, "empty auth header")
 		return
 	}
 
@@ -28,7 +28,7 @@ func (h *Handler) UserIdentity(c *gin.Context) {
 
 	userId, err := h.service.ParseToken(headerParts[1])
 	if err != nil {
-		newErrorResonse(c, http.StatusUnauthorized, err.Error())
+		newErrorResponse(c, http.StatusUnauthorized, err.Error())
 		return
 	}
 
@@ -54,7 +54,7 @@ func (h *Handler) CORSMiddleware() gin.HandlerFunc {
 func getUserId(c *gin.Context) (int, error) {
 	id, ok := c.Get(userCtx)
 	if !ok {
-		newErrorResonse(c, http.StatusInternalServerError, utils.ErrUserIdNotFound.Error())
+		newErrorResponse(c, http.StatusInternalServerError, utils.ErrUserIdNotFound.Error())
 		return 0, utils.ErrUserIdNotFound
 	}
 
