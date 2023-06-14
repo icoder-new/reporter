@@ -12,6 +12,7 @@ type Authorization interface {
 
 type User interface {
 	GetUserById(id int) (models.User, error)
+	UpdateUser(user models.User) (models.User, error)
 }
 
 type Repository struct {
