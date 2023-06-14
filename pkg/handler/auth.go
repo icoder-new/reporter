@@ -49,14 +49,8 @@ func (h *Handler) signIn(c *gin.Context) {
 		newErrorResponse(c, http.StatusBadRequest, err.Error())
 	}
 
-	token, user, err := h.service.GenerateToken(request.Email, request.Username, request.Password)
+	token, err := h.service.GenerateToken(request.Email, request.Username, request.Password)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"dev": gin.H{
-				"data":     user,
-				"password": user.Password,
-			},
-		})
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
