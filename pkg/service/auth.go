@@ -43,14 +43,14 @@ func (s *AuthService) CreateUser(firstname, lastname, username, email, password 
 	return s.repo.CreateUser(user)
 }
 
-func (s *AuthService) GenerateToken(email, username, password string) (string, models.User, error) {
+func (s *AuthService) GenerateToken(email, username, password string) (string, error) {
 	user, err := s.repo.GetUser(email, username)
 	if err != nil {
-		return "", user, err
+		return "", err
 	}
 
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password)); err != nil {
-		return "", user, err
+		return "", err
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, &tokenClaims{
@@ -63,7 +63,7 @@ func (s *AuthService) GenerateToken(email, username, password string) (string, m
 		user.ID,
 	})
 	t, err := token.SignedString([]byte(utils.AppSettings.AppParams.SecretKey))
-	return t, user, err
+	return t, err
 }
 
 func (s *AuthService) ParseToken(token string) (int, error) {
