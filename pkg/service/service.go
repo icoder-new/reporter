@@ -13,6 +13,7 @@ type Authorization interface {
 
 type User interface {
 	GetUserById(id int) (models.User, error)
+	UpdateUser(id int, firstname, lastname, email, username, password string) (models.User, error)
 }
 
 type Service struct {
