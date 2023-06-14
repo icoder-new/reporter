@@ -20,6 +20,14 @@ func (u *UserService) GetUserById(id int) (models.User, error) {
 	return u.repo.GetUserById(id)
 }
 
+func (u *UserService) DeleteUserById(id int) error {
+	return u.repo.DeleteUserById(id)
+}
+
+func (u *UserService) RestoreUserById(id int) error {
+	return u.repo.RestoreUserById(id)
+}
+
 func (u *UserService) UpdateUser(id int, firstname, lastname, email, username, password string) (models.User, error) {
 	user, err := u.GetUserById(id)
 	if err != nil {
@@ -53,6 +61,7 @@ func (u *UserService) UpdateUser(id int, firstname, lastname, email, username, p
 
 	return u.repo.UpdateUser(user)
 }
+
 func checkField(field string) bool {
 	if field == "" || field == " " || len(field) > 50 {
 		return false
