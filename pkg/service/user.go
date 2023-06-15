@@ -3,7 +3,7 @@ package service
 import (
 	"github.com/icoder-new/reporter/models"
 	"github.com/icoder-new/reporter/pkg/repository"
-	"golang.org/x/crypto/bcrypt"
+	"github.com/icoder-new/reporter/utils"
 )
 
 type UserService struct {
@@ -34,42 +34,30 @@ func (u *UserService) UpdateUser(id int, firstname, lastname, email, username, p
 		return user, err
 	}
 
-	if checkField(firstname) {
+	if utils.CheckField(firstname) {
 		user.Firstname = firstname
 	}
 
-	if checkField(lastname) {
+	if utils.CheckField(lastname) {
 		user.Lastname = lastname
 	}
 
-	if checkField(email) {
+	if utils.CheckField(email) {
 		user.Email = email
 	}
 
-	if checkField(username) {
+	if utils.CheckField(username) {
 		user.Username = username
 	}
 
-	if isChangeablePassword(user.Password, password) == nil {
-		pwd, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if utils.IsChangeablePassword(user.Password, password) == nil {
+		pwd, err := utils.GeneratePassword(password)
 		if err != nil {
 			return user, err
 		}
 
-		user.Password = string(pwd)
+		user.Password = pwd
 	}
 
 	return u.repo.UpdateUser(user)
-}
-
-func checkField(field string) bool {
-	if field == "" || field == " " || len(field) > 50 {
-		return false
-	}
-
-	return true
-}
-
-func isChangeablePassword(userPassword, password string) error {
-	return bcrypt.CompareHashAndPassword([]byte(userPassword), []byte(password))
 }

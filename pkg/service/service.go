@@ -19,10 +19,12 @@ type User interface {
 }
 
 type Account interface {
-	CreateAccountByUserId(account models.Account) (int, error)
-	UpdateAccountByUserId(account models.Account) (models.Account, error)
-	DeleteAccountByUserId(userId int) error
-	RestoreAccountByUserId(userId int) error
+	GetAccount(id, userId int) (models.Account, error)
+	GetAllAccounts(userId int) ([]models.Account, error)
+	CreateAccount(userId int, name string, balance float64) (int, error)
+	UpdateAccount(id, userId int, name string, balance float64) (models.Account, error)
+	DeleteAccount(id, userId int) error
+	RestoreAccount(id, userId int) error
 }
 
 type Service struct {
