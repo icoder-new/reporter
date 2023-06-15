@@ -15,8 +15,8 @@ type User struct {
 	Password  string         `json:"-" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
 	CreatedAt time.Time      `json:"-"`
-	UpdateAt  time.Time      `json:"-"`
-	DeleteAt  gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt time.Time      `json:"-"`
+	DeletedAt gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
 type Account struct {
@@ -26,8 +26,8 @@ type Account struct {
 	Balance   float64        `json:"balance" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
 	CreatedAt time.Time      `json:"-"`
-	UpdateAt  time.Time      `json:"-"`
-	DeleteAt  gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt time.Time      `json:"-"`
+	DeletedAt gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
 type Product struct {
@@ -38,8 +38,8 @@ type Product struct {
 	CategoryID  int            `json:"category_id" gorm:"references:categories.id"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
-	UpdateAt    time.Time      `json:"-"`
-	DeleteAt    gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt   time.Time      `json:"-"`
+	DeletedAt   gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
 type Category struct {
@@ -48,8 +48,8 @@ type Category struct {
 	Description string         `json:"description" gorm:"not null"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
-	UpdateAt    time.Time      `json:"-"`
-	DeleteAt    gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt   time.Time      `json:"-"`
+	DeletedAt   gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
 type Transaction struct {
@@ -72,6 +72,6 @@ type Report struct {
 	Page      int            `json:"page,omitempty"`
 	Type      string         `json:"type,omitempty"`
 	CreatedAt time.Time      `json:"-"`
-	UpdateAt  time.Time      `json:"-"`
-	DeleteAt  gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt time.Time      `json:"-"`
+	DeletedAt gorm.DeletedAt `json:"-" gorm:"index"`
 }
