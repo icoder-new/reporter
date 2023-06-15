@@ -44,11 +44,12 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		account := api.Group("/account", h.UserIdentity)
 		{
-			account.GET("/")
-			account.GET("/:id")
-			account.POST("/")
-			account.PUT("/:id")
-			account.DELETE("/")
+			account.GET("/", h.GetAllAccounts)
+			account.GET("/:id", h.GetAccount)
+			account.POST("/", h.CreateAccount)
+			account.PUT("/:id", h.UpdateAccount)
+			account.GET("/:id/restore", h.RestoreAccount)
+			account.DELETE("/:id", h.DeleteAccount)
 		}
 
 		report := api.Group("/report", h.UserIdentity)
