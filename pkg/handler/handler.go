@@ -40,6 +40,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			user.PUT("/", h.UpdateUser)
 			user.GET("/restore", h.RestoreUser)
 			user.DELETE("/delete", h.DeleteUser)
+			user.PATCH("/change", h.ChangePictureUser)
+			user.PATCH("/upload", h.UploadUserPicture)
 		}
 
 		account := api.Group("/account", h.UserIdentity)
@@ -50,6 +52,15 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			account.PUT("/:id", h.UpdateAccount)
 			account.GET("/:id/restore", h.RestoreAccount)
 			account.DELETE("/:id", h.DeleteAccount)
+			account.PATCH("/:id", h.ChangePictureAccount)
+			account.PATCH("/:id", h.UploadAccountPicture)
+		}
+
+		transaction := api.Group("/transaction", h.UserIdentity)
+		{
+			transaction.GET("/")
+			transaction.POST("/")
+			transaction.PATCH("/")
 		}
 
 		report := api.Group("/report", h.UserIdentity)
@@ -58,13 +69,6 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			// report.GET("/:id")
 			// report.GET("/:transaction_id")
 			// report.GET("/:user_id")
-		}
-
-		transaction := api.Group("/transaction", h.UserIdentity)
-		{
-			transaction.GET("/")
-			transaction.POST("/")
-			transaction.PATCH("/")
 		}
 	}
 
