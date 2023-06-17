@@ -16,6 +16,9 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+/.vscode
+logs/
+files/
 
 # Go workspace file
 go.work
@@ -23,5 +26,3 @@ go.work
 # Secret files
 .env
 
-# Log files
-logs/
