@@ -1,6 +1,10 @@
 package service
 
 import (
+	"fmt"
+	"os"
+	"time"
+
 	"github.com/icoder-new/reporter/models"
 	"github.com/icoder-new/reporter/pkg/repository"
 	"github.com/icoder-new/reporter/utils"
@@ -28,7 +32,10 @@ func (u *UserService) RestoreUserById(id int) error {
 	return u.repo.RestoreUserById(id)
 }
 
-func (u *UserService) UpdateUser(id int, firstname, lastname, email, username, password string) (models.User, error) {
+func (u *UserService) UpdateUser(
+	id int,
+	firstname, lastname, email, username, password string,
+) (models.User, error) {
 	user, err := u.GetUserById(id)
 	if err != nil {
 		return user, err
@@ -58,6 +65,34 @@ func (u *UserService) UpdateUser(id int, firstname, lastname, email, username, p
 
 		user.Password = pwd
 	}
+
+	return u.repo.UpdateUser(user)
+}
+
+func (u *UserService) UpdatePictureUser(id int, filepath string) (models.User, error) {
+	user, err := u.GetUserById(id)
+	if err != nil {
+		return user, err
+	}
+
+	if err := os.Remove(fmt.Sprintf("./file/layouts/%s", user.Picture)); err != nil {
+		return user, err
+	}
+
+	user.Picture = filepath
+	user.UpdatedAt = time.Now()
+
+	return u.repo.UpdateUser(user)
+}
+
+func (u *UserService) UploadUserPicture(id int, filepath string) (models.User, error) {
+	user, err := u.GetUserById(id)
+	if err != nil {
+		return user, err
+	}
+
+	user.Picture = filepath
+	user.UpdatedAt = time.Now()
 
 	return u.repo.UpdateUser(user)
 }

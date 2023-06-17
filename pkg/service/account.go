@@ -1,6 +1,8 @@
 package service
 
 import (
+	"fmt"
+	"os"
 	"time"
 
 	"github.com/icoder-new/reporter/models"
@@ -19,11 +21,11 @@ func NewAccountService(repo repository.Account) *AccountService {
 }
 
 func (s *AccountService) GetAccount(id, userId int) (models.Account, error) {
-	return s.repo.GetAccountUserId(id, userId)
+	return s.repo.GetAccount(id, userId)
 }
 
 func (s *AccountService) GetAllAccounts(userId int) ([]models.Account, error) {
-	return s.repo.GetAccountsByUserId(userId)
+	return s.repo.GetAccounts(userId)
 }
 
 func (s *AccountService) CreateAccount(userId int, name string, balance float64) (int, error) {
@@ -43,12 +45,12 @@ func (s *AccountService) CreateAccount(userId int, name string, balance float64)
 
 	account.IsActive = true
 
-	return s.repo.CreateAccountByUserId(account)
+	return s.repo.CreateAccount(account)
 }
 
 func (s *AccountService) UpdateAccount(id, userId int, name string, balance float64) (models.Account, error) {
 	var account models.Account
-	account, err := s.repo.GetAccountUserId(id, userId)
+	account, err := s.repo.GetAccount(id, userId)
 	if err != nil {
 		return account, err
 	}
@@ -67,13 +69,40 @@ func (s *AccountService) UpdateAccount(id, userId int, name string, balance floa
 
 	account.UpdatedAt = time.Now()
 
-	return s.repo.UpdateAccountByUserId(account)
+	return s.repo.UpdateAccount(account)
 }
 
 func (s *AccountService) DeleteAccount(id, userId int) error {
-	return s.repo.DeleteAccountByUserId(id, userId)
+	return s.repo.DeleteAccount(id, userId)
 }
 
 func (s *AccountService) RestoreAccount(id, userId int) error {
-	return s.repo.RestoreAccountByUserId(id, userId)
+	return s.repo.RestoreAccount(id, userId)
+}
+
+func (s *AccountService) ChangePictureAccount(id, userId int, filepath string) (models.Account, error) {
+	account, err := s.GetAccount(id, userId)
+	if err != nil {
+		return account, err
+	}
+
+	if err := os.Remove(fmt.Sprintf("./file/layouts/%s", account.Picture)); err != nil {
+		return account, err
+	}
+
+	account.Picture = filepath
+	account.UpdatedAt = time.Now()
+
+	return s.repo.UpdateAccount(account)
+}
+
+func (s *AccountService) UploadAccountPicture(id, userId int, filepath string) (models.Account, error) {
+	account, err := s.GetAccount(id, userId)
+	if err != nil {
+		return account, err
+	}
+	account.Picture = filepath
+	account.UpdatedAt = time.Now()
+
+	return s.repo.UpdateAccount(account)
 }

@@ -16,6 +16,8 @@ type User interface {
 	UpdateUser(id int, firstname, lastname, email, username, password string) (models.User, error)
 	DeleteUserById(id int) error
 	RestoreUserById(id int) error
+	UpdatePictureUser(id int, filepath string) (models.User, error)
+	UploadUserPicture(id int, filepath string) (models.User, error)
 }
 
 type Account interface {
@@ -25,6 +27,8 @@ type Account interface {
 	UpdateAccount(id, userId int, name string, balance float64) (models.Account, error)
 	DeleteAccount(id, userId int) error
 	RestoreAccount(id, userId int) error
+	ChangePictureAccount(id, userId int, filepath string) (models.Account, error)
+	UploadAccountPicture(id, userId int, filepath string) (models.Account, error)
 }
 
 type Service struct {
