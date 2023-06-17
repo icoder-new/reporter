@@ -13,6 +13,7 @@ type User struct {
 	Username  string         `json:"username" gorm:"not null,unique"`
 	Email     string         `json:"email" gorm:"not null,unique"`
 	Password  string         `json:"-" gorm:"not null"`
+	Picture   string         `json:"path,omitempty" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
 	CreatedAt time.Time      `json:"-"`
 	UpdatedAt time.Time      `json:"-"`
@@ -24,6 +25,7 @@ type Account struct {
 	Name      string         `json:"name" gorm:"not null"`
 	UserID    int            `json:"user_id" gorm:"references:users.id"`
 	Balance   float64        `json:"balance" gorm:"not null"`
+	Picture   string         `json:"path,omitempty" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
 	CreatedAt time.Time      `json:"-"`
 	UpdatedAt time.Time      `json:"-"`
@@ -36,6 +38,7 @@ type Product struct {
 	Description string         `json:"description" gorm:"not null"`
 	Price       float64        `json:"price" gorm:"not null"`
 	CategoryID  int            `json:"category_id" gorm:"references:categories.id"`
+	Picture     string         `json:"path,omitempty" gorm:"not null"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
 	UpdatedAt   time.Time      `json:"-"`
@@ -46,6 +49,7 @@ type Category struct {
 	ID          int            `json:"id" gorm:"primaryKey"`
 	Name        string         `json:"name" gorm:"not null"`
 	Description string         `json:"description" gorm:"not null"`
+	Picture     string         `json:"path,omitempty" gorm:"not null"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
 	UpdatedAt   time.Time      `json:"-"`
