@@ -55,6 +55,25 @@ func (h *Handler) GetAccount(c *gin.Context) {
 		return
 	}
 
+	hide := c.DefaultQuery("hide", "false")
+	if hide == "true" {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "success",
+			"data": gin.H{
+				"id":        account.ID,
+				"name":      account.Name,
+				"user_id":   account.UserID,
+				"balance":   "***",
+				"is_active": account.IsActive,
+			},
+		})
+		return
+	} else {
+		c.JSON(http.StatusNotFound, gin.H{
+			"message": "not found",
+		})
+	}
+
 	c.JSON(http.StatusOK, gin.H{
 		"message": "success",
 		"account": account,
@@ -72,6 +91,12 @@ func (h *Handler) GetAllAccounts(c *gin.Context) {
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
+	}
+
+	if len(accounts) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{
+			"message": "records not found",
+		})
 	}
 
 	c.JSON(http.StatusOK, gin.H{
