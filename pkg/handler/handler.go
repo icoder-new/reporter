@@ -52,8 +52,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			account.PUT("/:id", h.UpdateAccount)
 			account.GET("/:id/restore", h.RestoreAccount)
 			account.DELETE("/:id", h.DeleteAccount)
-			account.PATCH("/:id", h.ChangePictureAccount)
-			account.PATCH("/:id", h.UploadAccountPicture)
+			account.PATCH("/:id/change", h.ChangePictureAccount)
+			account.PATCH("/:id/upload", h.UploadAccountPicture)
 		}
 
 		transaction := api.Group("/transaction", h.UserIdentity)
