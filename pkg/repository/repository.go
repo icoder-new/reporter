@@ -18,12 +18,12 @@ type User interface {
 }
 
 type Account interface {
-	GetAccountsByUserId(userId int) ([]models.Account, error)
-	GetAccountUserId(id, userId int) (models.Account, error)
-	CreateAccountByUserId(account models.Account) (int, error)
-	UpdateAccountByUserId(account models.Account) (models.Account, error)
-	DeleteAccountByUserId(id, userId int) error
-	RestoreAccountByUserId(id, userId int) error
+	GetAccounts(userId int) ([]models.Account, error)
+	GetAccount(id, userId int) (models.Account, error)
+	CreateAccount(account models.Account) (int, error)
+	UpdateAccount(account models.Account) (models.Account, error)
+	DeleteAccount(id, userId int) error
+	RestoreAccount(id, userId int) error
 }
 
 type Repository struct {
