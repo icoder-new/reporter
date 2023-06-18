@@ -26,10 +26,30 @@ type Account interface {
 	RestoreAccount(id, userId int) error
 }
 
+type Category interface {
+	CreateCategory(cat models.Category) (models.Category, error)
+	GetCategories() ([]models.Category, error)
+	GetCategory(id int) (models.Category, error)
+	UpdateCategory(category models.Category) (models.Category, error)
+	DeleteCategory(id int) error
+	RestoreCategory(id int) error
+}
+
+type Product interface {
+	CreateProduct(product models.Product) (models.Product, error)
+	GetProducts(catId int) ([]models.Product, error)
+	GetProduct(id, catId int) (models.Product, error)
+	UpdateProduct(product models.Product) (models.Product, error)
+	DeleteProduct(id, catId int) error
+	RestoreProduct(id, catId int) error
+}
+
 type Repository struct {
 	Authorization
 	User
 	Account
+	Category
+	Product
 }
 
 func NewRepository(db *gorm.DB) *Repository {
@@ -37,5 +57,7 @@ func NewRepository(db *gorm.DB) *Repository {
 		Authorization: NewAuthPostgres(db),
 		User:          NewUserRepository(db),
 		Account:       NewAccountRepository(db),
+		Category:      NewCategoryRepository(db),
+		Product:       NewProductRepository(db),
 	}
 }
