@@ -34,9 +34,17 @@ func (u *UserRepository) UpdateUser(user models.User) (models.User, error) {
 }
 
 func (u *UserRepository) DeleteUserById(id int) error {
-	return u.db.Model(&models.User{}).Where("id = ? AND is_active = TRUE", id).Update("is_active", false).Error
+	return u.db.
+		Model(&models.User{}).
+		Where("id = ? AND is_active = TRUE", id).
+		Update("is_active", false).
+		Error
 }
 
 func (u *UserRepository) RestoreUserById(id int) error {
-	return u.db.Model(&models.User{}).Where("id = ? AND is_active = FALSE", id).Update("is_active", true).Error
+	return u.db.
+		Model(&models.User{}).
+		Where("id = ? AND is_active = FALSE", id).
+		Update("is_active", true).
+		Error
 }
