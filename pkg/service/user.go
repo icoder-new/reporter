@@ -75,7 +75,7 @@ func (u *UserService) UpdatePictureUser(id int, filepath string) (models.User, e
 		return user, err
 	}
 
-	if err := os.Remove(fmt.Sprintf("./file/layouts/%s", user.Picture)); err != nil {
+	if err := os.Remove(fmt.Sprintf("./files/layouts/%s", user.Picture)); err != nil {
 		return user, err
 	}
 

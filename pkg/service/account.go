@@ -86,7 +86,7 @@ func (s *AccountService) ChangePictureAccount(id, userId int, filepath string) (
 		return account, err
 	}
 
-	if err := os.Remove(fmt.Sprintf("./file/layouts/%s", account.Picture)); err != nil {
+	if err := os.Remove(fmt.Sprintf("./files/layouts/%s", account.Picture)); err != nil {
 		return account, err
 	}
 

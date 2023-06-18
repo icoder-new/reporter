@@ -152,7 +152,7 @@ func (h *Handler) UploadUserPicture(c *gin.Context) {
 		return
 	}
 
-	if err := c.SaveUploadedFile(image, fmt.Sprintf("./file/layouts/%s", filePath)); err != nil {
+	if err := c.SaveUploadedFile(image, fmt.Sprintf("./files/layouts/%s", filePath)); err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
