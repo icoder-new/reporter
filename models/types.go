@@ -23,7 +23,7 @@ type User struct {
 type Account struct {
 	ID        int            `json:"id" gorm:"primaryKey"`
 	Name      string         `json:"name" gorm:"not null"`
-	UserID    int            `json:"user_id" gorm:"references:users.id"`
+	UserID    int            `json:"user_id" gorm:"references users(id)"`
 	Balance   float64        `json:"balance" gorm:"not null"`
 	Picture   string         `json:"path,omitempty" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
@@ -37,7 +37,7 @@ type Product struct {
 	Name        string         `json:"name" gorm:"not null"`
 	Description string         `json:"description" gorm:"not null"`
 	Price       float64        `json:"price" gorm:"not null"`
-	CategoryID  int            `json:"category_id" gorm:"references:categories.id"`
+	CategoryID  int            `json:"category_id" gorm:"references categories(id)"`
 	Picture     string         `json:"path,omitempty" gorm:"not null"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
