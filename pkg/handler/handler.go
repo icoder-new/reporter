@@ -56,6 +56,32 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			account.PATCH("/:id/upload", h.UploadAccountPicture)
 		}
 
+		// TODO
+		category := api.Group("/category")
+		{
+			category.POST("/", h.CreateCategory)
+			category.GET("/", h.GetCategories)
+			category.GET("/:id", h.GetCategory)
+			category.PUT("/:id", h.UpdateCategory)
+			category.PATCH("/:id/upload", h.UploadPictureCategory)
+			category.PATCH("/:id/change", h.ChangePictureCategory)
+			category.DELETE("/:id/delete", h.DeleteCategory) // TODO
+			category.GET("/:id/restore", h.RestoreCategory)  // TODO
+		}
+
+		// TODO
+		product := api.Group("/product")
+		{
+			product.POST("/", h.CreateProduct)
+			product.GET("/", h.GetProducts)
+			product.GET("/:id", h.GetProduct)
+			category.PUT("/:id", h.UpdateProduct)
+			category.PATCH("/:id/upload", h.UploadPictureProduct)
+			category.PATCH("/:id/change", h.ChangePictureProduct)
+			category.DELETE("/:id/delete", h.DeleteProduct) // TODO
+			category.GET("/:id/restore", h.RestoreProduct)  // TODO
+		}
+
 		transaction := api.Group("/transaction", h.UserIdentity)
 		{
 			transaction.GET("/")
@@ -66,9 +92,9 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		report := api.Group("/report", h.UserIdentity)
 		{
 			report.GET("/")
-			// report.GET("/:id")
-			// report.GET("/:transaction_id")
-			// report.GET("/:user_id")
+			/* report.GET("/:id")
+			report.GET("/:transaction_id")
+			report.GET("/:user_id") */
 		}
 	}
 

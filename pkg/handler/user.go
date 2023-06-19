@@ -161,5 +161,4 @@ func (h *Handler) UploadUserPicture(c *gin.Context) {
 		"message": "success",
 		"data":    user,
 	})
-
 }
