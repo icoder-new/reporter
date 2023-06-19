@@ -75,11 +75,11 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			product.POST("/", h.CreateProduct)
 			product.GET("/", h.GetProducts)
 			product.GET("/:id", h.GetProduct)
-			category.PUT("/:id", h.UpdateProduct)
-			category.PATCH("/:id/upload", h.UploadPictureProduct)
-			category.PATCH("/:id/change", h.ChangePictureProduct)
-			category.DELETE("/:id/delete", h.DeleteProduct) // TODO
-			category.GET("/:id/restore", h.RestoreProduct)  // TODO
+			product.PUT("/:id", h.UpdateProduct)
+			product.PATCH("/:id/upload", h.UploadPictureProduct)
+			product.PATCH("/:id/change", h.ChangePictureProduct)
+			product.DELETE("/:id/delete", h.DeleteProduct) // TODO
+			product.GET("/:id/restore", h.RestoreProduct)  // TODO
 		}
 
 		transaction := api.Group("/transaction", h.UserIdentity)

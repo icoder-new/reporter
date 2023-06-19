@@ -18,7 +18,6 @@ type accountResponse struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
 	UserID   int    `json:"user_id"`
-	Balance  string `json:"balance"`
 	IsActive bool   `json:"is_active"`
 }
 
@@ -71,7 +70,6 @@ func (h *Handler) GetAccount(c *gin.Context) {
 				"id":        account.ID,
 				"name":      account.Name,
 				"user_id":   account.UserID,
-				"balance":   "***",
 				"is_active": account.IsActive,
 			},
 		})
@@ -109,7 +107,6 @@ func (h *Handler) GetAllAccounts(c *gin.Context) {
 				ID:       account.ID,
 				Name:     account.Name,
 				UserID:   account.UserID,
-				Balance:  "***",
 				IsActive: account.IsActive,
 			}
 		}
