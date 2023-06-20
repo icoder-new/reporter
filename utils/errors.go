@@ -10,5 +10,4 @@ var (
 	ErrInvalidAccountName   = errors.New("invalid account name")
 	ErrUnsupportedMediaType = errors.New("unsupported media type, type must be 'jpg' or 'jpeg'")
 	ErrInvalidName          = errors.New("invalid name")
-	ErrDescription          = errors.New("invalid description")
 )
