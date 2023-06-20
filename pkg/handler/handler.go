@@ -56,7 +56,6 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			account.PATCH("/:id/upload", h.UploadAccountPicture)
 		}
 
-		// TODO
 		category := api.Group("/category")
 		{
 			category.POST("/", h.CreateCategory)
@@ -65,21 +64,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			category.PUT("/:id", h.UpdateCategory)
 			category.PATCH("/:id/upload", h.UploadPictureCategory)
 			category.PATCH("/:id/change", h.ChangePictureCategory)
-			category.DELETE("/:id/delete", h.DeleteCategory) // TODO
-			category.GET("/:id/restore", h.RestoreCategory)  // TODO
-		}
-
-		// TODO
-		product := api.Group("/product")
-		{
-			product.POST("/", h.CreateProduct)
-			product.GET("/", h.GetProducts)
-			product.GET("/:id", h.GetProduct)
-			product.PUT("/:id", h.UpdateProduct)
-			product.PATCH("/:id/upload", h.UploadPictureProduct)
-			product.PATCH("/:id/change", h.ChangePictureProduct)
-			product.DELETE("/:id/delete", h.DeleteProduct) // TODO
-			product.GET("/:id/restore", h.RestoreProduct)  // TODO
+			category.DELETE("/:id/delete", h.DeleteCategory)
+			category.GET("/:id/restore", h.RestoreCategory)
 		}
 
 		transaction := api.Group("/transaction", h.UserIdentity)

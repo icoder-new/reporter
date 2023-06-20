@@ -32,25 +32,14 @@ type Account interface {
 }
 
 type Category interface {
-	CreateCategory(name, description string) (models.Category, error)
+	CreateCategory(name, description string, price float64) (models.Category, error)
 	GetCategories() ([]models.Category, error)
 	GetCategory(id int) (models.Category, error)
-	UpdateCategory(id int, name, description string) (models.Category, error)
+	UpdateCategory(id int, name, description string, price float64) (models.Category, error)
 	UploadPictureCategory(id int, filepath string) (models.Category, error)
 	ChangePictureCategory(id int, filepath string) (models.Category, error)
 	DeleteCategory(id int) error
 	RestoreCategory(id int) error
-}
-
-type Product interface {
-	CreateProduct(catId int, name, description string, price float64) (models.Product, error)
-	GetProducts(catId int) ([]models.Product, error)
-	GetProduct(id, catId int) (models.Product, error)
-	UpdateProduct(id, catId int, name, description string, price float64) (models.Product, error)
-	UploadPictureProduct(id, catId int, filepath string) (models.Product, error)
-	ChangePictureProduct(id, catId int, filepath string) (models.Product, error)
-	DeleteProduct(id, catId int) error
-	RestoreProduct(id, catId int) error
 }
 
 type Service struct {
@@ -58,7 +47,6 @@ type Service struct {
 	User
 	Account
 	Category
-	Product
 }
 
 func NewService(repository *repository.Repository) *Service {
@@ -66,5 +54,6 @@ func NewService(repository *repository.Repository) *Service {
 		Authorization: NewAuthService(repository.Authorization),
 		User:          NewUserService(repository.User),
 		Account:       NewAccountService(repository.Account),
+		Category:      NewCategoryService(repository.Category),
 	}
 }

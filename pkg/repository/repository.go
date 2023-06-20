@@ -35,21 +35,11 @@ type Category interface {
 	RestoreCategory(id int) error
 }
 
-type Product interface {
-	CreateProduct(product models.Product) (models.Product, error)
-	GetProducts(catId int) ([]models.Product, error)
-	GetProduct(id, catId int) (models.Product, error)
-	UpdateProduct(product models.Product) (models.Product, error)
-	DeleteProduct(id, catId int) error
-	RestoreProduct(id, catId int) error
-}
-
 type Repository struct {
 	Authorization
 	User
 	Account
 	Category
-	Product
 }
 
 func NewRepository(db *gorm.DB) *Repository {
@@ -58,6 +48,5 @@ func NewRepository(db *gorm.DB) *Repository {
 		User:          NewUserRepository(db),
 		Account:       NewAccountRepository(db),
 		Category:      NewCategoryRepository(db),
-		Product:       NewProductRepository(db),
 	}
 }
