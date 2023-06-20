@@ -14,13 +14,6 @@ type accountData struct {
 	Balance float64 `json:"balance"`
 }
 
-type accountResponse struct {
-	ID       int    `json:"id"`
-	Name     string `json:"name"`
-	UserID   int    `json:"user_id"`
-	IsActive bool   `json:"is_active"`
-}
-
 func (h *Handler) CreateAccount(c *gin.Context) {
 	var request accountData
 
@@ -64,20 +57,7 @@ func (h *Handler) GetAccount(c *gin.Context) {
 
 	hide := c.DefaultQuery("hide", "false")
 	if hide == "true" {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "success",
-			"data": gin.H{
-				"id":        account.ID,
-				"name":      account.Name,
-				"user_id":   account.UserID,
-				"is_active": account.IsActive,
-			},
-		})
-		return
-	} else {
-		c.JSON(http.StatusNotFound, gin.H{
-			"message": "not found",
-		})
+		account.Balance = 0
 	}
 
 	c.JSON(http.StatusOK, gin.H{
@@ -101,28 +81,9 @@ func (h *Handler) GetAllAccounts(c *gin.Context) {
 
 	hide := c.DefaultQuery("hide", "false")
 	if hide == "true" {
-		hiddenAccounts := make([]accountResponse, len(accounts))
-		for i, account := range accounts {
-			hiddenAccounts[i] = accountResponse{
-				ID:       account.ID,
-				Name:     account.Name,
-				UserID:   account.UserID,
-				IsActive: account.IsActive,
-			}
+		for i := range accounts {
+			accounts[i].Balance = 0
 		}
-
-		if len(hiddenAccounts) == 0 {
-			c.JSON(http.StatusNotFound, gin.H{
-				"message": "records not found",
-			})
-			return
-		}
-
-		c.JSON(http.StatusOK, gin.H{
-			"message":  "success",
-			"accounts": hiddenAccounts,
-		})
-		return
 	}
 
 	if len(accounts) == 0 {
