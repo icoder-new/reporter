@@ -32,23 +32,11 @@ type Account struct {
 	DeletedAt gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
-type Product struct {
-	ID          int            `json:"id" gorm:"primaryKey"`
-	Name        string         `json:"name" gorm:"not null"`
-	Description string         `json:"description" gorm:"not null"`
-	Price       float64        `json:"price" gorm:"not null"`
-	CategoryID  int            `json:"category_id" gorm:"references categories(id)"`
-	Picture     string         `json:"path,omitempty" gorm:"not null"`
-	IsActive    bool           `json:"is_active" gorm:"not null"`
-	CreatedAt   time.Time      `json:"-"`
-	UpdatedAt   time.Time      `json:"-"`
-	DeletedAt   gorm.DeletedAt `json:"-" gorm:"index"`
-}
-
 type Category struct {
 	ID          int            `json:"id" gorm:"primaryKey"`
 	Name        string         `json:"name" gorm:"not null"`
 	Description string         `json:"description" gorm:"not null"`
+	Price       float64        `json:"price,omitempty" gorm:"not null"`
 	Picture     string         `json:"path,omitempty" gorm:"not null"`
 	IsActive    bool           `json:"is_active" gorm:"not null"`
 	CreatedAt   time.Time      `json:"-"`
