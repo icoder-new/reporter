@@ -39,6 +39,7 @@ func (s *AuthService) CreateUser(firstname, lastname, username, email, password 
 	}
 
 	user.Password = string(pwd)
+	user.CreatedAt = time.Now()
 
 	return s.repo.CreateUser(user)
 }

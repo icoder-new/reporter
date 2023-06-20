@@ -66,6 +66,8 @@ func (u *UserService) UpdateUser(
 		user.Password = pwd
 	}
 
+	user.CreatedAt = time.Now()
+
 	return u.repo.UpdateUser(user)
 }
 

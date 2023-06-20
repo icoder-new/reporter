@@ -50,9 +50,17 @@ func (c *CategoryRepository) UpdateCategory(category models.Category) (models.Ca
 }
 
 func (c *CategoryRepository) DeleteCategory(id int) error {
-	return c.db.Model(&models.Category{}).Update("is_active = ?", false).Error
+	return c.db.
+		Model(&models.Category{}).
+		Where("id = ? AND is_active = FALSE", id).
+		Update("is_active", false).
+		Error
 }
 
 func (c *CategoryRepository) RestoreCategory(id int) error {
-	return c.db.Model(&models.Category{}).Update("is_active = ?", true).Error
+	return c.db.
+		Model(&models.Category{}).
+		Where("id = ? AND is_active = TRUE", id).
+		Update("is_active", true).
+		Error
 }

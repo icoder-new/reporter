@@ -10,8 +10,9 @@ import (
 )
 
 type catData struct {
-	Name        string `json:"name"`
-	Description string `json:"description"`
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Price       float64 `json:"price"`
 }
 
 func (h *Handler) CreateCategory(c *gin.Context) {
@@ -22,9 +23,10 @@ func (h *Handler) CreateCategory(c *gin.Context) {
 		return
 	}
 
-	cat, err := h.service.CreateCategory(request.Name, request.Description)
+	cat, err := h.service.CreateCategory(request.Name, request.Description, request.Price)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
 	}
 
 	c.JSON(http.StatusCreated, gin.H{
@@ -71,7 +73,7 @@ func (h *Handler) UpdateCategory(c *gin.Context) {
 		return
 	}
 
-	cat, err := h.service.UpdateCategory(id, request.Name, request.Description)
+	cat, err := h.service.UpdateCategory(id, request.Name, request.Description, request.Price)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return

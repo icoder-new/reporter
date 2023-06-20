@@ -53,14 +53,16 @@ func (r *AccountRepository) UpdateAccount(account models.Account) (models.Accoun
 }
 
 func (r *AccountRepository) DeleteAccount(id, userId int) error {
-	return r.db.Model(&models.Account{}).
+	return r.db.
+		Model(&models.Account{}).
 		Where("id = ? AND user_id = ? AND is_active = ?", id, userId, false).
 		Update("is_active", false).
 		Error
 }
 
 func (r *AccountRepository) RestoreAccount(id, userId int) error {
-	return r.db.Model(&models.Account{}).
+	return r.db.
+		Model(&models.Account{}).
 		Where("id = ? AND user_id = ? AND is_active = ?", id, userId, false).
 		Update("is_active", true).
 		Error

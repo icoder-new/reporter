@@ -221,7 +221,7 @@ func (h *Handler) UploadAccountPicture(c *gin.Context) {
 		return
 	}
 
-	account, err := h.service.ChangePictureAccount(id, userId, filePath)
+	account, err := h.service.UploadAccountPicture(id, userId, filePath)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return

@@ -20,7 +20,7 @@ func NewCategoryService(repo repository.Category) *CategoryService {
 	}
 }
 
-func (c *CategoryService) CreateCategory(name, description string) (models.Category, error) {
+func (c *CategoryService) CreateCategory(name, description string, price float64) (models.Category, error) {
 	var cat models.Category
 
 	if utils.CheckField(name) {
@@ -29,11 +29,10 @@ func (c *CategoryService) CreateCategory(name, description string) (models.Categ
 		return cat, utils.ErrInvalidName
 	}
 
-	if utils.CheckField(description) {
-		cat.Description = description
-	} else {
-		return cat, utils.ErrDescription
-	}
+	cat.Description = description
+	cat.Price = price
+	cat.IsActive = true
+	cat.CreatedAt = time.Now()
 
 	return c.repo.CreateCategory(cat)
 }
@@ -46,7 +45,7 @@ func (c *CategoryService) GetCategory(id int) (models.Category, error) {
 	return c.repo.GetCategory(id)
 }
 
-func (c *CategoryService) UpdateCategory(id int, name, description string) (models.Category, error) {
+func (c *CategoryService) UpdateCategory(id int, name, description string, price float64) (models.Category, error) {
 	cat, err := c.GetCategory(id)
 	if err != nil {
 		return cat, err
@@ -56,10 +55,8 @@ func (c *CategoryService) UpdateCategory(id int, name, description string) (mode
 		cat.Name = name
 	}
 
-	if utils.CheckField(description) {
-		cat.Description = description
-	}
-
+	cat.Description = description
+	cat.Price = price
 	cat.UpdatedAt = time.Now()
 
 	return c.repo.UpdateCategory(cat)
@@ -93,12 +90,10 @@ func (c *CategoryService) ChangePictureCategory(id int, filepath string) (models
 	return c.repo.UpdateCategory(cat)
 }
 
-// TODO
 func (c *CategoryService) DeleteCategory(id int) error {
 	return c.repo.DeleteCategory(id)
 }
 
-// TODO
 func (c *CategoryService) RestoreCategory(id int) error {
 	return c.repo.RestoreCategory(id)
 }

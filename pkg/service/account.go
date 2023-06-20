@@ -44,6 +44,7 @@ func (s *AccountService) CreateAccount(userId int, name string, balance float64)
 	}
 
 	account.IsActive = true
+	account.CreatedAt = time.Now()
 
 	return s.repo.CreateAccount(account)
 }
