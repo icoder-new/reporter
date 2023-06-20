@@ -24,7 +24,7 @@ type Account struct {
 	ID        int            `json:"id" gorm:"primaryKey"`
 	Name      string         `json:"name" gorm:"not null"`
 	UserID    int            `json:"user_id" gorm:"references users(id)"`
-	Balance   float64        `json:"balance" gorm:"not null"`
+	Balance   float64        `json:"balance,omitempty" gorm:"not null"`
 	Picture   string         `json:"path,omitempty" gorm:"not null"`
 	IsActive  bool           `json:"is_active" gorm:"not null"`
 	CreatedAt time.Time      `json:"-"`
