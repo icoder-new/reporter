@@ -18,6 +18,7 @@ type User interface {
 }
 
 type Account interface {
+	ExistsAccount(id int) (models.Account, error)
 	GetAccounts(userId int) ([]models.Account, error)
 	GetAccount(id, userId int) (models.Account, error)
 	CreateAccount(account models.Account) (int, error)
@@ -35,11 +36,19 @@ type Category interface {
 	RestoreCategory(id int) error
 }
 
+type Transaction interface {
+	CreateTransaction(transaction models.Transaction) (models.Transaction, error)
+	GetTransaction(id, userId int) (models.Transaction, error)
+	UpdateTransaction(transaction models.Transaction) (models.Transaction, error)
+	GetTransactions(userId int) ([]models.Transaction, error)
+}
+
 type Repository struct {
 	Authorization
 	User
 	Account
 	Category
+	Transaction
 }
 
 func NewRepository(db *gorm.DB) *Repository {
@@ -48,5 +57,6 @@ func NewRepository(db *gorm.DB) *Repository {
 		User:          NewUserRepository(db),
 		Account:       NewAccountRepository(db),
 		Category:      NewCategoryRepository(db),
+		Transaction:   NewTransactionRepository(db),
 	}
 }
