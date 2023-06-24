@@ -70,17 +70,18 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		transaction := api.Group("/transaction", h.UserIdentity)
 		{
-			transaction.GET("/")
-			transaction.POST("/")
-			transaction.PATCH("/")
+			transaction.GET("/", h.GetTransactions)
+			transaction.GET("/:id", h.GetTransaction)
+			transaction.POST("/", h.CreateTransaction)
+			transaction.PATCH("/", h.UpdateTransaction)
 		}
 
 		report := api.Group("/report", h.UserIdentity)
 		{
-			report.GET("/")
-			/* report.GET("/:id")
-			report.GET("/:transaction_id")
-			report.GET("/:user_id") */
+			report.POST("/")
+			/* report.POST("/:id")
+			report.POST("/:transaction_id")
+			report.POST("/:user_id") */
 		}
 	}
 
