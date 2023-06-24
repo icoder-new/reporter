@@ -1,0 +1,52 @@
+[
+	{
+		"name": "Electronics",
+		"description": "Offers a wide range of electronic devices such as computers, mobile devices, home appliances, audio and video equipment, with prices ranging from affordable options to high-end models.",
+		"price": 1078.71
+	},
+	{
+		"name": "Fashion and Clothing",
+		"description": "Provides a variety of fashionable clothing items, including apparel, footwear, accessories, and jewelry, catering to different styles and budgets.",
+		"price": 210.55
+	},
+	{
+		"name": "Home and Garden",
+		"description": "Offers a selection of furniture, interior goods, kitchenware, gardening tools, and decor items to enhance the aesthetics and functionality of your home, with prices varying based on the specific items.",
+		"price": 280.82
+	},
+	{
+		"name": "Beauty and Health",
+		"description": "Provides cosmetics, skincare and haircare products, perfumes, vitamins, supplements, and other health-related goods to help individuals look and feel their best, with prices ranging from budget-friendly to luxury options.",
+		"price": 55.0
+	},
+	{
+		"name": "Sports and Fitness",
+		"description": "Offers sports apparel, equipment, and accessories for various sports and fitness activities, catering to both casual enthusiasts and professional athletes, with prices reflecting the quality and brand of the items.",
+		"price": 260.0
+	},
+	{
+		"name": "Kids and Toys",
+		"description": "Features a range of products for children of different ages, including toys, clothing, footwear, and baby care items, with prices varying based on the type and brand of the product.",
+		"price": 55.0
+	},
+	{
+		"name": "Books and Entertainment",
+		"description": "Offers a wide selection of books, magazines, movies, music, video games, and board games to entertain and educate, with prices varying depending on the format and popularity of the content.",
+		"price": 17.50
+	},
+	{
+		"name": "Travel and Tourism",
+		"description": "Provides services and products related to travel, including hotel bookings, flights, vacation packages, car rentals, and other travel-related goods, with prices depending on the destination and the type of service or package chosen.",
+		"price": 2750.0
+	},
+	{
+		"name": "Food and Beverages",
+		"description": "Offers a variety of food products, beverages, delicacies, snacks, and even prepared meals, with prices ranging from budget-friendly options to gourmet or specialty items.",
+		"price": 27.50
+	},
+	{
+		"name": "Repair and Construction",
+		"description": "Provides materials, tools, and products for repairs and construction projects, catering to DIY enthusiasts or professionals, with prices varying based on the specific items and their quality.",
+		"price": 255.0
+	}
+]

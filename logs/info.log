@@ -1,0 +1,1356 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 02:47:27 | 200 |    845.5146ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/16 - 02:48:58 | 415 |     62.7392ms |             ::1 | POST     "/api/v1/user/upload"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 02:52:25 | 200 |    1.3947701s |             ::1 | POST     "/api/v1/user/upload"
+[GIN] 2023/06/16 - 02:53:24 | 404 |    672.8535ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 02:53:41 | 404 |     396.288ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 02:54:23 | 404 |    392.0575ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 02:54:37 | 404 |    399.0599ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 02:55:31 | 404 |     398.958ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 02:56:37 | 404 |    397.1435ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 02:58:33 | 404 |    725.8129ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 03:01:36 | 404 |    795.4744ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:02:00 | 404 |    398.7672ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:02:07 | 404 |    401.7087ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:02:08 | 404 |    290.8292ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:02:48 | 401 |            0s |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:03:12 | 200 |    810.5104ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/16 - 03:03:30 | 404 |    398.3805ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:04:54 | 404 |    396.2559ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:04:56 | 404 |    399.9527ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:04:57 | 404 |    402.2172ms |             ::1 | GET      "/api/v1/user/download"
+[GIN] 2023/06/16 - 03:05:36 | 200 |            0s |             ::1 | GET      "/"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/16 - 03:05:46 | 200 |    683.4023ms |             ::1 | GET      "/api/v1/user/"
+[GIN] 2023/06/16 - 03:05:57 | 404 |    389.0174ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 200 with 404
+[GIN] 2023/06/16 - 03:08:00 | 200 |    790.2392ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 03:13:06 | 404 |    793.7336ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 14:17:55 | 200 |     916.791ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/16 - 14:18:16 | 200 |    677.1469ms |             ::1 | GET      "/api/v1/user/download"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] POST   /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/download     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadUserImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/image        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserImagePath-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/download --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/image --> github.com/icoder-new/reporter/pkg/handler.(*Handler).AccountImagePath-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/16 - 16:04:22 | 200 |    855.7899ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/16 - 16:04:57 | 200 |    665.6912ms |             ::1 | GET      "/api/v1/account/"
+[GIN] 2023/06/16 - 16:05:11 | 200 |    1.2104375s |             ::1 | GET      "/api/v1/account/1/restore"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/16 - 16:05:16 | 200 |     381.727ms |             ::1 | GET      "/api/v1/account/"
+[GIN] 2023/06/16 - 16:06:38 | 200 |    1.8988697s |             ::1 | POST     "/api/v1/account/2/upload"
+[GIN] 2023/06/16 - 16:07:35 | 500 |   21.9716362s |             ::1 | POST     "/api/v1/account/3/upload"
+[GIN] 2023/06/16 - 16:08:05 | 500 |   21.1963652s |             ::1 | POST     "/api/v1/account/3/upload"
+[GIN] 2023/06/16 - 16:08:54 | 500 |   40.9598791s |             ::1 | POST     "/api/v1/account/3/upload"
+[GIN] 2023/06/16 - 16:09:37 | 200 |    7.6524177s |             ::1 | POST     "/api/v1/account/3/upload"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/download --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/image --> github.com/icoder-new/reporter/pkg/handler.(*Handler).AccountImagePath-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 19:31:51 | 200 |     1.065454s |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:32:10 | 200 |    917.0361ms |             ::1 | GET      "/api/v1/user/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/download --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/image --> github.com/icoder-new/reporter/pkg/handler.(*Handler).AccountImagePath-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 19:48:42 | 200 |    1.2669265s |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:49:07 | 200 |    880.0982ms |             ::1 | GET      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:50:10 | 401 |     35.7966ms |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:50:18 | 400 |            0s |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/download --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DownloadAccountImage-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/image --> github.com/icoder-new/reporter/pkg/handler.(*Handler).AccountImagePath-fm (6 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:53:21 | 400 |    191.0862ms |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:53:37 | 400 |     10.2749ms |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:54:14 | 400 |       888.5µs |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:54:24 | 400 |      9.9499ms |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:54:33 | 400 |       797.3µs |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:54:40 | 400 |            0s |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:54:55 | 400 |            0s |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] redirecting request 307: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/17 - 19:55:03 | 400 |       656.5µs |             ::1 | PUT      "/api/v1/user/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 20:45:11 | 200 |    838.2041ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:45:57 | 400 |       922.9µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:46:18 | 400 |            0s |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:46:24 | 400 |       574.6µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:47:05 | 400 |       252.5µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:47:06 | 400 |         511µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:47:21 | 400 |       514.5µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:47:22 | 400 |       338.8µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 20:54:31 | 200 |    890.8993ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:54:47 | 400 |      1.1395ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:54:58 | 400 |       392.7µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:56:05 | 400 |      84.681ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:56:08 | 400 |         677µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:56:48 | 400 |       237.7µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:56:50 | 400 |       296.7µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:56:54 | 400 |            0s |             ::1 | POST     "/api/v1/account/"
+[GIN] 2023/06/17 - 20:57:53 | 200 |    781.6256ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:59:25 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:59:44 | 400 |       314.3µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 20:59:47 | 400 |            0s |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 21:03:01 | 400 |       563.9µs |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 21:12:14 | 401 |            0s |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 22:04:32 | 200 |    864.0088ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:04:55 | 400 |       544.6µs |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:05:20 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:07:06 | 400 |     65.6794ms |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:07:08 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:07:17 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:07:25 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:07:27 | 400 |            0s |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 22:46:34 | 200 |    918.6135ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:46:59 | 500 |     21.4732ms |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:49:50 | 500 |    128.4396ms |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 22:55:02 | 500 |     96.7895ms |       127.0.0.1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 23:09:46 | 200 |    950.3825ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 23:11:30 | 200 |      1.4971ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/17 - 23:26:12 | 200 |    912.1492ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/17 - 23:27:48 | 500 |     22.0471ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/18 - 00:56:38 | 200 |    881.5622ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/18 - 00:56:51 | 500 |    663.1643ms |             ::1 | GET      "/api/v1/account/2"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:57:17 | 401 |            0s |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:57:36 | 500 |    956.5922ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:58:17 | 201 |    1.2231024s |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:58:21 | 201 |    925.7353ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 307: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:58:24 | 201 |    929.5148ms |             ::1 | POST     "/api/v1/account/"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/18 - 00:58:40 | 200 |    658.9362ms |             ::1 | GET      "/api/v1/account/"
+[GIN] 2023/06/18 - 00:58:43 | 500 |    395.9718ms |             ::1 | GET      "/api/v1/account/2"
+[GIN] 2023/06/18 - 00:58:55 | 200 |    950.0394ms |             ::1 | GET      "/api/v1/account/2"
+[GIN] 2023/06/18 - 00:59:39 | 200 |     376.626ms |             ::1 | GET      "/api/v1/account/2?hide=2"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/18 - 01:08:55 | 200 |    836.5991ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/18 - 01:09:10 | 200 |    666.2823ms |             ::1 | GET      "/api/v1/account/2?hide=2"
+[GIN] 2023/06/18 - 01:09:17 | 200 |    398.0294ms |             ::1 | GET      "/api/v1/account/2?hide=true"
+[GIN] 2023/06/18 - 01:09:22 | 200 |      396.12ms |             ::1 | GET      "/api/v1/account/2?hide=false"
+[GIN] 2023/06/18 - 01:09:25 | 200 |    388.7734ms |             ::1 | GET      "/api/v1/account/2"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] POST   /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProducts-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProduct-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureProduct-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/product/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/20 - 20:01:19 | 200 |    872.5002ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN] 2023/06/20 - 20:01:36 | 200 |    671.2434ms |             ::1 | GET      "/api/v1/account/2"
+[GIN] 2023/06/20 - 20:01:42 | 200 |    397.0357ms |             ::1 | GET      "/api/v1/account/2?hide=true"
+[GIN] 2023/06/20 - 20:02:13 | 500 |    384.9853ms |             ::1 | GET      "/api/v1/account/2hide=true"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/?hide=true
+[GIN] 2023/06/20 - 20:02:26 | 200 |    676.1529ms |             ::1 | GET      "/api/v1/account/?hide=true"
+[GIN] 2023/06/20 - 20:02:36 | 200 |    384.7244ms |             ::1 | GET      "/api/v1/account/2"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] POST   /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProducts-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProduct-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureProduct-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/product/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/20 - 20:08:23 | 200 |    773.2871ms |             ::1 | GET      "/api/v1/account/2"
+[GIN] 2023/06/20 - 20:08:37 | 200 |     386.763ms |             ::1 | GET      "/api/v1/account/2?hide=true"
+[GIN] 2023/06/20 - 20:08:43 | 200 |    405.0073ms |             ::1 | GET      "/api/v1/account/2"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] POST   /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProducts-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetProduct-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/product/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureProduct-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/product/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureProduct-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/product/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/product/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreProduct-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/20 - 20:11:32 | 200 |    956.7215ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/20 - 20:11:50 | 200 |    697.7385ms |             ::1 | GET      "/api/v1/account/"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/?hide=true
+[GIN] 2023/06/20 - 20:12:00 | 200 |    394.6795ms |             ::1 | GET      "/api/v1/account/?hide=true"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/20 - 23:37:33 | 200 |    884.7534ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/20 - 23:40:55 | 201 |    1.2622904s |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 301: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/20 - 23:45:38 | 200 |    697.8311ms |             ::1 | GET      "/api/v1/category/"
+[GIN] 2023/06/20 - 23:46:40 | 500 |    696.1687ms |             ::1 | GET      "/api/v1/category/3"
+[GIN] 2023/06/20 - 23:46:42 | 200 |    387.5389ms |             ::1 | GET      "/api/v1/category/1"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 201
+[GIN] 2023/06/21 - 00:07:25 | 500 |            0s |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:07:48 | 201 |    959.5758ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:07:51 | 201 |    946.5009ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:07:52 | 201 |    942.8595ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:07:54 | 201 |     950.379ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 500 with 201
+[GIN] 2023/06/21 - 00:09:29 | 500 |     60.2798ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:14:19 | 201 |    1.3334068s |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:14:41 | 201 |     956.358ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:15:01 | 201 |    956.5773ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:15:27 | 201 |    968.3071ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:15:44 | 201 |    950.3732ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:15:55 | 201 |    960.5707ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:16:06 | 201 |     949.457ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:16:17 | 201 |    964.4521ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:16:34 | 201 |    967.3642ms |             ::1 | POST     "/api/v1/category/"
+[GIN-debug] redirecting request 307: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:16:49 | 201 |    969.9509ms |             ::1 | POST     "/api/v1/category/"
+[GIN] 2023/06/21 - 00:17:23 | 200 |    686.7233ms |             ::1 | GET      "/api/v1/category/8"
+[GIN] 2023/06/21 - 00:17:30 | 200 |    391.7896ms |             ::1 | GET      "/api/v1/category/1"
+[GIN-debug] redirecting request 301: /api/v1/category/ --> /api/v1/category/
+[GIN] 2023/06/21 - 00:17:38 | 200 |    674.3468ms |             ::1 | GET      "/api/v1/category/"
+[GIN] 2023/06/21 - 00:18:25 | 200 |    406.4334ms |             ::1 | GET      "/api/v1/category/3"
+[GIN] 2023/06/21 - 00:19:06 | 200 |    1.5265393s |             ::1 | PUT      "/api/v1/category/3"
+[GIN] 2023/06/21 - 00:19:10 | 200 |    1.2471881s |             ::1 | PUT      "/api/v1/category/3"
+[GIN] 2023/06/21 - 00:20:58 | 404 |            0s |             ::1 | DELETE   "/api/v1/category/3"
+[GIN] 2023/06/21 - 00:21:11 | 500 |    680.3818ms |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 00:24:06 | 500 |    1.1083846s |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN] 2023/06/21 - 00:25:08 | 500 |    984.7317ms |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 00:27:16 | 200 |    1.2992201s |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN] 2023/06/21 - 00:27:20 | 404 |            0s |             ::1 | DELETE   "/api/v1/category/3/restore"
+[GIN] 2023/06/21 - 00:27:25 | 200 |    943.4148ms |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN] 2023/06/21 - 00:27:30 | 200 |    944.0734ms |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN] 2023/06/21 - 00:27:58 | 200 |    690.4009ms |             ::1 | GET      "/api/v1/category/3"
+[GIN] 2023/06/21 - 00:28:11 | 200 |    952.7488ms |             ::1 | DELETE   "/api/v1/category/3/delete"
+[GIN] 2023/06/21 - 00:28:31 | 200 |    957.8566ms |             ::1 | GET      "/api/v1/category/3/restore"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 00:57:44 | 401 |     94.7263ms |             ::1 | PATCH    "/api/v1/account/:id/change"
+[GIN] 2023/06/21 - 00:58:06 | 401 |       535.4µs |             ::1 | PATCH    "/api/v1/user/change"
+[GIN] 2023/06/21 - 00:59:52 | 200 |    932.5979ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] redirecting request 301: /api/v1/user/ --> /api/v1/user/
+[GIN] 2023/06/21 - 01:00:05 | 200 |    661.3625ms |             ::1 | GET      "/api/v1/user/"
+[GIN] 2023/06/21 - 01:00:20 | 200 |    1.2201219s |             ::1 | DELETE   "/api/v1/user/delete"
+[GIN] 2023/06/21 - 01:00:26 | 200 |    949.4335ms |             ::1 | DELETE   "/api/v1/user/delete"
+[GIN] 2023/06/21 - 01:01:41 | 200 |    1.2256268s |             ::1 | GET      "/api/v1/user/restore"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/21 - 01:02:04 | 200 |    693.6391ms |             ::1 | GET      "/api/v1/account/"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/?hide=true
+[GIN] 2023/06/21 - 01:02:18 | 200 |     391.325ms |             ::1 | GET      "/api/v1/account/?hide=true"
+[GIN-debug] redirecting request 301: /api/v1/account/ --> /api/v1/account/
+[GIN] 2023/06/21 - 01:02:23 | 200 |    400.6701ms |             ::1 | GET      "/api/v1/account/"
+[GIN] 2023/06/21 - 01:02:47 | 401 |        36.8µs |             ::1 | DELETE   "/api/v1/account/:id"
+[GIN] 2023/06/21 - 01:03:02 | 200 |    1.2530603s |             ::1 | DELETE   "/api/v1/account/1"
+[GIN] 2023/06/21 - 01:03:22 | 200 |    940.2042ms |             ::1 | GET      "/api/v1/account/1/restore"
+[GIN] 2023/06/21 - 01:04:09 | 500 |     673.562ms |             ::1 | PATCH    "/api/v1/account/1/upload"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 01:07:16 | 200 |    1.9679164s |             ::1 | PATCH    "/api/v1/account/1/upload"
+[GIN] 2023/06/21 - 01:08:11 | 500 |    671.4774ms |             ::1 | PATCH    "/api/v1/account/1/change"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 01:16:52 | 401 |     64.5548ms |             ::1 | PATCH    "/api/v1/account/1/change"
+[GIN] 2023/06/21 - 01:16:59 | 200 |    876.5092ms |             ::1 | POST     "/api/v1/auth/login"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /                         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).InitRoutes.func1 (5 handlers)
+[GIN-debug] POST   /api/v1/auth/register     --> github.com/icoder-new/reporter/pkg/handler.(*Handler).SignUp-fm (5 handlers)
+[GIN-debug] POST   /api/v1/auth/login        --> github.com/icoder-new/reporter/pkg/handler.(*Handler).signIn-fm (5 handlers)
+[GIN-debug] GET    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetUser-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/user/             --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateUser-fm (6 handlers)
+[GIN-debug] GET    /api/v1/user/restore      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreUser-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/user/delete       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/change       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureUser-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/user/upload       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadUserPicture-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAllAccounts-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetAccount-fm (6 handlers)
+[GIN-debug] POST   /api/v1/account/          --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateAccount-fm (6 handlers)
+[GIN-debug] PUT    /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateAccount-fm (6 handlers)
+[GIN-debug] GET    /api/v1/account/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreAccount-fm (6 handlers)
+[GIN-debug] DELETE /api/v1/account/:id       --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureAccount-fm (6 handlers)
+[GIN-debug] PATCH  /api/v1/account/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadAccountPicture-fm (6 handlers)
+[GIN-debug] POST   /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).CreateCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/         --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategories-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).GetCategory-fm (5 handlers)
+[GIN-debug] PUT    /api/v1/category/:id      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UpdateCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/upload --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UploadPictureCategory-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/category/:id/change --> github.com/icoder-new/reporter/pkg/handler.(*Handler).ChangePictureCategory-fm (5 handlers)
+[GIN-debug] DELETE /api/v1/category/:id/delete --> github.com/icoder-new/reporter/pkg/handler.(*Handler).DeleteCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/category/:id/restore --> github.com/icoder-new/reporter/pkg/handler.(*Handler).RestoreCategory-fm (5 handlers)
+[GIN-debug] GET    /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] POST   /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] PATCH  /api/v1/transaction/      --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN-debug] GET    /api/v1/report/           --> github.com/icoder-new/reporter/pkg/handler.(*Handler).UserIdentity-fm (5 handlers)
+[GIN] 2023/06/21 - 01:18:48 | 500 |    843.1945ms |             ::1 | PATCH    "/api/v1/account/1/change"
+[GIN] 2023/06/21 - 01:19:15 | 200 |    1.6141835s |             ::1 | PATCH    "/api/v1/account/1/upload"
+[GIN] 2023/06/21 - 01:19:21 | 200 |    1.7946272s |             ::1 | PATCH    "/api/v1/account/1/upload"
+[GIN] 2023/06/21 - 01:19:26 | 200 |    1.3182899s |             ::1 | PATCH    "/api/v1/account/1/change"
