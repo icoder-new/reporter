@@ -9,6 +9,7 @@ import (
 	"github.com/icoder-new/reporter"
 	"github.com/icoder-new/reporter/db"
 	"github.com/icoder-new/reporter/logger"
+	"github.com/icoder-new/reporter/models"
 	"github.com/icoder-new/reporter/pkg/handler"
 	"github.com/icoder-new/reporter/pkg/repository"
 	"github.com/icoder-new/reporter/pkg/service"
@@ -24,6 +25,15 @@ func main() {
 	db.StartDbConnection()
 
 	_db := db.GetDBConn()
+	if err := _db.AutoMigrate(
+		&models.User{},
+		&models.Account{},
+		&models.Category{},
+		&models.Transaction{},
+	); err != nil {
+		logger.Error.Fatal("failed to migrate tables")
+	}
+
 	repository := repository.NewRepository(_db)
 	service := service.NewService(repository)
 	handler := handler.NewHandler(service)
@@ -31,7 +41,7 @@ func main() {
 	srv := new(reporter.Server)
 	go func() {
 		if err := srv.Run(utils.AppSettings.AppParams.PortRun, handler.InitRoutes()); err != nil {
-			logger.Error.Fatal("Error occured while running http server. Error is: ", err.Error())
+			logger.Error.Fatal("Error occurred while running http server. Error is: ", err.Error())
 			return
 		}
 	}()
@@ -42,7 +52,7 @@ func main() {
 
 	db.DisconnectDB(_db)
 	if err := srv.Shutdown(context.Background()); err != nil {
-		logger.Error.Fatal("Error occured on server shutting down. Error is: ", err.Error())
+		logger.Error.Fatal("Error occurred on server shutting down. Error is: ", err.Error())
 		return
 	}
 }
