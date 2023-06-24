@@ -1,8 +1,12 @@
 package service
 
 import (
+	"os"
+	"time"
+
 	"github.com/icoder-new/reporter/models"
 	"github.com/icoder-new/reporter/pkg/repository"
+	"github.com/xuri/excelize/v2"
 )
 
 type Authorization interface {
@@ -50,12 +54,31 @@ type Transaction interface {
 	GetTransactions(userId int) ([]models.Transaction, error)
 }
 
+type Report interface {
+	GetCSVReport(
+		userFrom, userTo models.User,
+		accountFrom, accountTo models.Account,
+		tr []models.Transaction,
+	) (*os.File, error)
+	GetExcelReport(
+		userFrom, userTo models.User,
+		accountFrom, accountTo models.Account,
+		tr []models.Transaction,
+	) (*excelize.File, error)
+	GetReport(
+		FromID, ToID int, ToType string,
+		Limit, Page int, Type string,
+		From, To time.Time,
+	) ([]models.Transaction, error)
+}
+
 type Service struct {
 	Authorization
 	User
 	Account
 	Category
 	Transaction
+	Report
 }
 
 func NewService(repository *repository.Repository) *Service {
@@ -65,5 +88,6 @@ func NewService(repository *repository.Repository) *Service {
 		Account:       NewAccountService(repository.Account),
 		Category:      NewCategoryService(repository.Category),
 		Transaction:   NewTransactionService(repository.Transaction),
+		Report:        NewReportService(repository.Report),
 	}
 }
