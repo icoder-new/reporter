@@ -58,15 +58,13 @@ type Transaction struct {
 }
 
 type Report struct {
-	ID       int       `json:"id" gorm:"not null"`
-	FromID   int       `json:"from_id,omitempty"`
-	ToID     int       `json:"to_id,omitempty"`
-	ToType   string    `json:"to_type,omitempty"`
-	Limit    int       `json:"limit,omitempty"`
-	Page     int       `json:"page,omitempty"`
-	Type     string    `json:"type,omitempty"`
-	DateFrom string    `json:"date_from,omitempty"`
-	DateTo   string    `json:"date_to,omitempty"`
-	From     time.Time `json:"-"`
-	To       time.Time `json:"-"`
+	ID     int       `json:"id" gorm:"not null"`
+	FromID int       `json:"from_id,omitempty"`
+	ToID   int       `json:"to_id,omitempty"`
+	ToType string    `json:"to_type,omitempty"`
+	Limit  int       `json:"limit,omitempty"`
+	Page   int       `json:"page,omitempty"`
+	Type   string    `json:"type,omitempty"`
+	From   time.Time `json:"-"`
+	To     time.Time `json:"-"`
 }
