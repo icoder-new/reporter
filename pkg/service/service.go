@@ -21,6 +21,7 @@ type User interface {
 }
 
 type Account interface {
+	ExistsAccount(id int) (models.Account, error)
 	GetAccount(id, userId int) (models.Account, error)
 	GetAllAccounts(userId int) ([]models.Account, error)
 	CreateAccount(userId int, name string, balance float64) (int, error)
@@ -42,11 +43,19 @@ type Category interface {
 	RestoreCategory(id int) error
 }
 
+type Transaction interface {
+	CreateTransaction(tr models.Transaction) (models.Transaction, error)
+	GetTransaction(id, userId int) (models.Transaction, error)
+	UpdateTransaction(id, userId int, comment string) (models.Transaction, error)
+	GetTransactions(userId int) ([]models.Transaction, error)
+}
+
 type Service struct {
 	Authorization
 	User
 	Account
 	Category
+	Transaction
 }
 
 func NewService(repository *repository.Repository) *Service {
@@ -55,5 +64,6 @@ func NewService(repository *repository.Repository) *Service {
 		User:          NewUserService(repository.User),
 		Account:       NewAccountService(repository.Account),
 		Category:      NewCategoryService(repository.Category),
+		Transaction:   NewTransactionService(repository.Transaction),
 	}
 }
