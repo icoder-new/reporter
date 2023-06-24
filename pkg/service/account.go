@@ -20,6 +20,10 @@ func NewAccountService(repo repository.Account) *AccountService {
 	}
 }
 
+func (s *AccountService) ExistsAccount(id int) (models.Account, error) {
+	return s.repo.ExistsAccount(id)
+}
+
 func (s *AccountService) GetAccount(id, userId int) (models.Account, error) {
 	return s.repo.GetAccount(id, userId)
 }
