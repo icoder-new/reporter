@@ -15,6 +15,16 @@ func NewAccountRepository(db *gorm.DB) *AccountRepository {
 	}
 }
 
+func (r *AccountRepository) ExistsAccount(id int) (models.Account, error) {
+	var a models.Account
+	err := r.db.Model(&models.Account{}).Where("id = ? AND is_active = ?", id, true).First(&a).Error
+	if err != nil {
+		return a, err
+	}
+
+	return a, nil
+}
+
 func (r *AccountRepository) GetAccounts(userId int) ([]models.Account, error) {
 	var accounts []models.Account
 
