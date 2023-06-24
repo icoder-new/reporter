@@ -78,7 +78,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		report := api.Group("/report", h.UserIdentity)
 		{
-			report.POST("/:page", h.GetReport)
+			report.POST("/?page", h.GetReport)
 		}
 	}
 
