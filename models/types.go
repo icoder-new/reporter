@@ -48,12 +48,13 @@ type Transaction struct {
 	ID        int            `json:"id" gorm:"primaryKey"`
 	From      int            `json:"from_id"`
 	To        int            `json:"to_id"`
-	Comment   string         `json:"comment" gorm:"not null"`
+	ToType    string         `json:"to_type"`
+	Comment   string         `json:"comment,omitempty" gorm:"not null"`
 	Amount    float64        `json:"amount"`
 	Type      string         `json:"type"`
 	CreatedAt time.Time      `json:"created_at"`
-	UpdateAt  time.Time      `json:"updated_at"`
-	DeleteAt  gorm.DeletedAt `json:"-" gorm:"index"`
+	UpdatedAt time.Time      `json:"updated_at"`
+	DeletedAt gorm.DeletedAt `json:"-" gorm:"index"`
 }
 
 type Report struct {
