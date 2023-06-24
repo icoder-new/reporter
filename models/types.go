@@ -61,6 +61,7 @@ type Report struct {
 	ID        int            `json:"id" gorm:"not null"`
 	From      int            `json:"from_id,omitempty"`
 	To        int            `json:"to_id,omitempty"`
+	ToType    string         `json:"to_type,omitempty"`
 	Limit     int            `json:"limit,omitempty"`
 	Page      int            `json:"page,omitempty"`
 	Type      string         `json:"type,omitempty"`
