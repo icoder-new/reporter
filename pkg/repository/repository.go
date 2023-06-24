@@ -43,12 +43,17 @@ type Transaction interface {
 	GetTransactions(userId int) ([]models.Transaction, error)
 }
 
+type Report interface {
+	GetReport(rep models.Report) ([]models.Transaction, error)
+}
+
 type Repository struct {
 	Authorization
 	User
 	Account
 	Category
 	Transaction
+	Report
 }
 
 func NewRepository(db *gorm.DB) *Repository {
@@ -58,5 +63,6 @@ func NewRepository(db *gorm.DB) *Repository {
 		Account:       NewAccountRepository(db),
 		Category:      NewCategoryRepository(db),
 		Transaction:   NewTransactionRepository(db),
+		Report:        NewReportRepository(db),
 	}
 }
